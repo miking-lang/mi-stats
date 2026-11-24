@@ -71,6 +71,13 @@ end
 # NOTE(vipa, 2026-09-29): Add dependencies we know are platform
 # specific, and thus won't be detected by the automatic check above
 set -a dependencies $boostDir/boost/config/{stdlib,platform,compiler}/*.hpp
+set -a dependencies $eigenDir/Eigen/src/Core/arch/**/*
+
+# NOTE(vipa, 2026-11-24): There are more headers that could be
+# included if different `#define`s are given, plus some stuff for
+# MSVC. I believe all of them are quite unlikely to be relevant for
+# us, but they exist and can be included as above if that turns out to
+# be wrong.
 
 function dependenciesIn --argument-names dir
     path resolve -- $dependencies | sort | uniq | string replace --regex --filter -- '^'(string escape --style regex $dir) ''
