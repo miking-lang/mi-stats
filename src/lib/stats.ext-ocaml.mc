@@ -33,6 +33,146 @@ let miStatsExtMap =
         cLibraries = []
       }
     ]),
+    ("externalBinomialLogPmf", [
+      { expr = "Mi_stats.mi_binomial_lpmf",
+        ty = tyarrows_ [tyint_, tyint_, tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalBinomialSample", [
+      { expr = "Mi_stats.mi_binomial_rng_",
+        ty = tyarrows_ [tyint_, tyfloat_, tyint_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalBetaLogPdf", [
+      { expr = "Mi_stats.mi_beta_lpdf",
+        ty = tyarrows_ [tyfloat_, tyfloat_, tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalBetaSample", [
+      { expr = "Mi_stats.mi_beta_rng_",
+        ty = tyarrows_ [tyfloat_, tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalBetaBinomialLogPmf", [
+      { expr = "Mi_stats.mi_beta_binomial_lpmf",
+        ty = tyarrows_ [tyint_, tyint_, tyfloat_, tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalBetaBinomialSample", [
+      { expr = "Mi_stats.mi_beta_binomial_rng_",
+        ty = tyarrows_ [tyint_, tyfloat_, tyfloat_, tyint_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalChiSquareLogPdf", [
+      { expr = "Mi_stats.mi_chi_square_lpdf",
+        ty = tyarrows_ [tyfloat_, tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalChiSquareCdf", [
+      { expr = "Mi_stats.mi_chi_square_cdf",
+        ty = tyarrows_ [tyfloat_, tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalChiSquareSample", [
+      { expr = "Mi_stats.mi_chi_square_rng_",
+        ty = tyarrows_ [tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalDiscreteRangeLogPmf", [
+      { expr = "Mi_stats.mi_discrete_range_lpmf",
+        ty = tyarrows_ [tyint_, tyint_, tyint_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalDiscreteRangeSample", [
+      { expr = "Mi_stats.mi_discrete_range_rng_",
+        ty = tyarrows_ [tyint_, tyint_, tyint_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalExponentialLogPdf", [
+      { expr = "Mi_stats.mi_exponential_lpdf",
+        ty = tyarrows_ [tyfloat_, tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalExponentialSample", [
+      { expr = "Mi_stats.mi_exponential_rng_",
+        ty = tyarrows_ [tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalGammaLogPdf", [
+      { expr = "Mi_stats.mi_gamma_lpdf",
+        ty = tyarrows_ [tyfloat_, tyfloat_, tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalGammaCdf", [
+      { expr = "Mi_stats.mi_gamma_cdf",
+        ty = tyarrows_ [tyfloat_, tyfloat_, tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalGammaSample", [
+      { expr = "Mi_stats.mi_gamma_rng_",
+        ty = tyarrows_ [tyfloat_, tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalNegBinomialLogPmf", [
+      { expr = "Mi_stats.mi_neg_binomial_lpmf",
+        ty = tyarrows_ [tyint_, tyfloat_, tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalNegBinomialSample", [
+      { expr = "Mi_stats.mi_neg_binomial_rng_",
+        ty = tyarrows_ [tyfloat_, tyfloat_, tyint_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalPoissonLogPmf", [
+      { expr = "Mi_stats.mi_poisson_lpmf",
+        ty = tyarrows_ [tyint_, tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalPoissonSample", [
+      { expr = "Mi_stats.mi_poisson_rng_",
+        ty = tyarrows_ [tyfloat_, tyint_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
     ("externalNormalLogPdf", [
       { expr = "Mi_stats.mi_normal_lpdf",
         ty = tyarrows_ [tyfloat_, tyfloat_, tyfloat_, tyfloat_],
@@ -42,6 +182,34 @@ let miStatsExtMap =
     ]),
     ("externalNormalSample", [
       { expr = "Mi_stats.mi_normal_rng_",
+        ty = tyarrows_ [tyfloat_, tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalParetoType2LogPdf", [
+      { expr = "Mi_stats.mi_pareto_type_2_lpdf",
+        ty = tyarrows_ [tyfloat_, tyfloat_, tyfloat_, tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalParetoType2Sample", [
+      { expr = "Mi_stats.mi_pareto_type_2_rng_",
+        ty = tyarrows_ [tyfloat_, tyfloat_, tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalUniformLogPdf", [
+      { expr = "Mi_stats.mi_uniform_lpdf",
+        ty = tyarrows_ [tyfloat_, tyfloat_, tyfloat_, tyfloat_],
+        libraries = ["mi_stats"],
+        cLibraries = []
+      }
+    ]),
+    ("externalUniformSample", [
+      { expr = "Mi_stats.mi_uniform_rng_",
         ty = tyarrows_ [tyfloat_, tyfloat_, tyfloat_],
         libraries = ["mi_stats"],
         cLibraries = []
